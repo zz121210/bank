@@ -1,22 +1,22 @@
-<form action="/join/join_process" method="POST">
+<form action="join/join_process" method="POST" onsubmit="return validCheck();">
 <div class="box-fl shadow w25 p1 bg_c_white">
     <i class="icofont-email icofont-2x c-1"></i>    
-    <input type="text" name="m_id" id="id" placeholder="아이디(이메일)">
+    <input type="text" name="m_id" id="id" placeholder="아이디(이메일)" required>
 </div>
 
 <div class="box-fl shadow w25 p1 bg_c_white mt1">
     <i class="icofont-ui-password icofont-2x c-1"></i>    
-    <input type="text" name="m_pw" id="pw1" placeholder="비밀번호">
+    <input type="text" name="m_pw" id="pw1" placeholder="비밀번호" required>
 </div>
 
 <div class="box-fl shadow w25 p1 bg_c_white mt1">
     <i class="icofont-ui-password icofont-2x c-1"></i>    
-    <input type="text" id="pw2" placeholder="비밀번호 재 확인">
+    <input type="text" id="pw2" placeholder="비밀번호 재 확인" required>
 </div>
 
 <div class="box-fl shadow w25 p1 bg_c_white mt1">  
-    <select name="m_role" id="roll" class="w_p100 ta-c">
-        <option value=""> 직원 </option>
+    <select name="m_role" id="role" class="w_p100 ta-c">
+        <option value="">직업</option>
         <option value="elementary">초등학생</option>
         <option value="middle">중학생</option>
         <option value="high">고등학생</option>
@@ -38,3 +38,18 @@
 
 
 <a href="join.html"> 회원가입 </a>
+
+<script type="text/javascript">
+    const validCheck = () => {
+        const firstPw = document.querySelector("#pw1").value
+        const secondPw = document.querySelector("#pw2").value
+        const m_role = document.querySelector("#role").value
+        if(firstPw === secondPw && m_role !== "") {
+            alert("pass")
+            return true;
+        }
+
+        alert("no")
+        return false;
+    }
+</script>
