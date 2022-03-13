@@ -26,4 +26,19 @@ router.post("/join_process", (req, res) => {
   
 })
 
+router.post("/ajax/valid", (req, res) => {
+  const {m_id} = req.body
+
+  db.query("select * from waw_member where m_id=?", [m_id], (err, result) => {
+    if(result.length > 0) {
+      res.json(true)
+    }
+    else {
+      res.json(false)
+    }
+  })
+})
+
+
+
 module.exports = router;

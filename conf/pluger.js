@@ -54,13 +54,10 @@ set.default(root_n1, root_n2)
 if( root_n1 == "user" && pathname_n == 1)  { // user
     switch(root_n2) {
         case "index" :
-            set.css(root_n1, root_n2, "test")
-            set.js(root_n1, root_n2, "test")
-
+            
         case "join" :
             
-            set.css(root_n1, root_n2, "test")
-            set.js(root_n1, root_n2, "test")
+            set.js(root_n1, root_n2, "ajax")
     }
 }
 

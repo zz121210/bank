@@ -2,7 +2,11 @@
 <div class="box-fl shadow w25 p1 bg_c_white">
     <i class="icofont-email icofont-2x c-1"></i>    
     <input type="text" name="m_id" id="id" placeholder="아이디(이메일)" required>
+    
 </div>
+<h1 id="msg"></h1>
+
+
 
 <div class="box-fl shadow w25 p1 bg_c_white mt1">
     <i class="icofont-ui-password icofont-2x c-1"></i>    
@@ -38,18 +42,3 @@
 
 
 <a href="join.html"> 회원가입 </a>
-
-<script type="text/javascript">
-    const validCheck = () => {
-        const firstPw = document.querySelector("#pw1").value
-        const secondPw = document.querySelector("#pw2").value
-        const m_role = document.querySelector("#role").value
-        if(firstPw === secondPw && m_role !== "") {
-            alert("pass")
-            return true;
-        }
-
-        alert("no")
-        return false;
-    }
-</script>
