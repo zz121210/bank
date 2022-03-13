@@ -4,10 +4,10 @@ const db = mysql.createConnection({
   connectionLimit : 100,
   waitForConnections : true,
   queueLimit :0,
-  host     : 'db.wndiaks48600.gabia.io',
-  user     : 'wndiaks48600',
-  password : 'rnfptskfn1!',
-  database : 'dbwndiaks48600',
+  host     : 'localhost',
+  user     : 'root',
+  password : 'sk369369',
+  database : 'bank',
   wait_timeout : 28800,
   connect_timeout :10
 })
