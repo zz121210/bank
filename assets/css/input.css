@@ -1,0 +1,10 @@
+input {
+    outline: none;
+    border: 0px solid;
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+input:focus {
+    outline: none;
+}

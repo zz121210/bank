@@ -1,0 +1,236 @@
+/* 
+    . width
+    . height
+    . margin
+    . padding
+    . font-size
+    . flex
+    . box 
+    . color
+    . border
+    . shadow
+    . box
+    . etc
+*/
+
+/* . width */
+
+.wC5{ width: 0.5em }
+.w10{ width: 10em }
+.w15{ width: 15em }
+.w20{ width: 20em }
+.w25{ width: 25em }
+.w30{ width: 30em }
+.w35{ width: 35em }
+.w40{ width: 40em }
+.w45{ width: 45em }
+.w50{ width: 50em }
+.w55{ width: 55em }
+.w60{ width: 60em }
+.w65{ width: 65em }
+.w70{ width: 70em }
+.w75{ width: 75em }
+.w80{ width: 80em }
+.w85{ width: 85em }
+.w90{ width: 90em }
+.w95{ width: 95em }
+.w100{ width: 100em }
+
+.w_p10{ width: 10% }
+.w_p20{ width: 20% }
+.w_p30{ width: 30% }
+.w_p40{ width: 40% }
+.w_p50{ width: 50% }
+.w_p60{ width: 60% }
+.w_p70{ width: 70% }
+.w_p80{ width: 80% }
+.w_p90{ width: 90% }
+.w_p100{ width: 100% }
+
+/* . heigth */
+
+.hC5{ height: 0.5em }
+.h10{ height: 10em }
+.h15{ height: 15em }
+.h20{ height: 20em }
+.h25{ height: 25em }
+.h30{ height: 30em }
+.h35{ height: 35em }
+.h40{ height: 40em }
+.h45{ height: 45em }
+.h50{ height: 50em }
+.h55{ height: 55em }
+.h60{ height: 60em }
+.h65{ height: 65em }
+.h70{ height: 70em }
+.h75{ height: 75em }
+.h80{ height: 80em }
+.h85{ height: 85em }
+.h90{ height: 90em }
+.h95{ height: 95em }
+.h100{ height: 100em }
+
+.h_p10{ height: 10% }
+.h_p20{ height: 20% }
+.h_p30{ height: 30% }
+.h_p40{ height: 40% }
+.h_p50{ height: 50% }
+.h_p60{ height: 60% }
+.h_p70{ height: 70% }
+.h_p80{ height: 80% }
+.h_p90{ height: 90% }
+.h_p100{ height: 100% }
+
+/* . margin */
+
+.mC5{ margin: 0.5em }
+.m10{ margin: 1em }
+.m20{ margin: 2em }
+.m30{ margin: 3em }
+.m40{ margin: 4em }
+.m50{ margin: 5em }
+.m60{ margin: 6em }
+.m70{ margin: 7em }
+.m80{ margin: 8em }
+.m90{ margin: 9em }
+.m100{ margin: 10em }
+
+.mt1 { margin-top: 1em }
+.mt2 { margin-top: 2em }
+.mt3 { margin-top: 3em }
+.mt4 { margin-top: 4em }
+.mt5 { margin-top: 5em }
+.mt6 { margin-top: 6em }
+.mt7 { margin-top: 7em }
+.mt8 { margin-top: 8em }
+.mt9 { margin-top: 9em }
+.mt10 { margin-top: 10em }
+.mt15 { margin-top: 15em }
+
+.mb1 { margin-bottom: 1em }
+.mb2 { margin-bottom: 2em }
+.mb3 { margin-bottom: 3em }
+.mb4 { margin-bottom: 4em }
+.mb5 { margin-bottom: 5em }
+.mb6 { margin-bottom: 6em }
+.mb7 { margin-bottom: 7em }
+.mb8 { margin-bottom: 8em }
+.mb9 { margin-bottom: 9em }
+.mb10 { margin-bottom: 10em }
+
+.m_p10{ margin: 10% }
+.m_p20{ margin: 20% }
+.m_p30{ margin: 30% }
+.m_p40{ margin: 40% }
+.m_p50{ margin: 50% }
+.m_p60{ margin: 60% }
+.m_p70{ margin: 70% }
+.m_p80{ margin: 80% }
+.m_p90{ margin: 90% }
+.m_p100{ margin: 100% }
+
+
+/* . padding */
+
+.pC5{ padding: 0.5em }
+.p1{ padding: 1em }
+.p2{ padding: 2em }
+.p3{ padding: 3em }
+.p4{ padding: 4em }
+.p5{ padding: 5em }
+.p6{ padding: 6em }
+.p7{ padding: 7em }
+.p8{ padding: 8em }
+.p9{ padding: 9em }
+.p10{ padding: 10em }
+
+.p_p10{ padding: 10% }
+.p_p20{ padding: 20% }
+.p_p30{ padding: 30% }
+.p_p40{ padding: 40% }
+.p_p50{ padding: 50% }
+.p_p60{ padding: 60% }
+.p_p70{ padding: 70% }
+.p_p80{ padding: 80% }
+.p_p90{ padding: 90% }
+.p_p100{ padding: 100% }
+
+
+/* . font-size */
+.fsC5  { font-size: 0.5em }
+.fs1    { font-size: 1em }
+.fs1C5  { font-size: 1.5em }
+.fs2    { font-size: 2em }
+.fs2C5  { font-size: 2.5em }
+.fs3    { font-size: 3em }
+.fs3C5  { font-size: 3.5em }
+.fs4    { font-size: 4em }
+.fs4C5  { font-size: 4.5em }
+.fs5    { font-size: 5em }
+.fs5C5  { font-size: 5.5em }
+.fs6    { font-size: 6em }
+.fs6C5  { font-size: 6.5em }
+.fs7    { font-size: 7em }
+.fs7C5  { font-size: 7.5em }
+.fs8    { font-size: 8em }
+.fs8C5  { font-size: 8.5em }
+.fs9    { font-size: 9em }
+.fs9C5  { font-size: 9.5em }
+.fs10   { font-size: 10em }
+
+/* . flex */
+.jc-sa { justify-content: space-around }
+
+.jc-sb { justify-content: space-between }
+
+.jc-c { justify-content: center }
+
+.fd-c { flex-direction: column }
+
+.fw-w { flex-wrap: wrap }
+
+.f { display: flex; }
+
+/* . color */
+.c-1 { color: white }
+
+.c-1 { color: #1d557a }
+
+.c-gray { color: gray; }
+
+/* . bg-color */
+.bg_c_white { background-color : white }
+
+.bg_c-gray { background-color : rgb(238, 238, 238) }
+
+.bg_c-1 { background-color : #1d557a }
+
+/* . border */
+
+.bd-s { border: 0.1em solid }
+
+/* . shdow */
+
+.shadow { box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px }
+
+/* . box */
+.box-fl {
+    display: flex;
+    border-radius: 0.5em;
+}
+
+.box {
+    border-radius: 5px;
+}
+
+/* . etc */
+
+.center {
+    position: absolute; 
+    left: 50%;
+    transform: translate(-50%, 0); /*추가*/
+}
+
+.ta-c {
+    text-align: center;
+}
