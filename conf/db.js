@@ -6,7 +6,7 @@ const db = mysql.createConnection({
   queueLimit :0,
   host     : 'localhost',
   user     : 'root',
-  password : 'sk369369',
+  password : 'rnfptskfn1xnqmffkr1illipal1',
   database : 'bank',
   wait_timeout : 28800,
   connect_timeout :10
