@@ -4,7 +4,11 @@ const common = require('../../../conf/common')
 const db = require('../../../conf/db')
 
 router.get("/", (req, res) => {
-  res.render("../../routes/user/join/views/index.ejs")
+  res.render("../../routes/user/join/views/index.ejs",
+    {
+      layout : "../../components/layout/loginLayout.ejs"
+    }
+  )
 })
 
 router.post("/join_process", (req, res) => {
@@ -23,7 +27,6 @@ router.post("/join_process", (req, res) => {
       res.redirect("/login")
     })
   })
-  
 })
 
 router.post("/ajax/valid", (req, res) => {
@@ -38,7 +41,5 @@ router.post("/ajax/valid", (req, res) => {
     }
   })
 })
-
-
 
 module.exports = router;

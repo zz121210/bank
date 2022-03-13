@@ -4,10 +4,10 @@ const db = mysql.createConnection({
   connectionLimit : 100,
   waitForConnections : true,
   queueLimit :0,
-  host     : 'localhost',
-  user     : 'root',
-  password : 'sk369369',
-  database : 'bank',
+  host     : 'zz12121000.cafe24.com',
+  user     : 'zz12121000',
+  password : 'rnfptskfn1!',
+  database : 'zz12121000',
   wait_timeout : 28800,
   connect_timeout :10
 })
