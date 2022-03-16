@@ -5,6 +5,8 @@
 // (3). 랜덤 문자 함수 < 20211018 김진우
 // (4). 랜덤 문자+숫자 함수 < 20211018 김진우
 
+const crypto = require('crypto')
+
 module.exports = {
   // (1)
   addComma : (num) => {
@@ -41,4 +43,25 @@ module.exports = {
       return randStr
   },
 
+  createHashedPassword : (password) => new Promise(async(resolve, reject) => {
+    crypto.randomBytes(64, (err,buf) => {
+      crypto.pbkdf2(password, buf.toString('base64'), 9999, 64, 'sha512', (err, key) => {
+        if(err) {
+          reject(err)
+        } else {
+          resolve({password: key.toString('base64'), salt})
+        }
+      })
+    })
+  }),
+  
+  makePasswordToHashed : (plainPassword, salt) => new Promise(async (resolve, reject) => {
+    crypto.pbkdf2(plainPassword, salt, 9999, 64, 'sha512', (err, key) => {
+      if(err) {
+        reject(err)
+      } else {
+        resolve(key.toString('base64'))
+      }
+    })
+  })
 }
