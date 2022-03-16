@@ -1,15 +1,18 @@
-<form action="/login/login_process" method="POST">
+<form action="/login/process/login_process" method="POST">
     <div class="box-fl shadow w25 p1 bg_c_white">
         <i class="icofont-email icofont-2x c-1"></i>    
-        <input type="text" name="m_id" id="id" placeholder="아이디(이메일)">
+        <input type="text" name="m_id" id="id" placeholder="아이디(이메일)" required>
     </div>
 
     <div class="box-fl shadow w25 p1 bg_c_white mt1">
         <i class="icofont-ui-password icofont-2x c-1"></i>    
-        <input type="text" name="m_pw" id="pw" placeholder="비밀번호">
+        <input type="password" name="m_pw" id="pw" placeholder="비밀번호" required>
     </div>
     <div class="box-fl jc-sa">
-        <input type="submit" value="로그인" class="shadow bg_c_white w20 p1 mt1">
+        <input type="submit" value="로그인" class="shadow bg_c_white w20 p1 mt1 cur-p">
     </div>
 </form>
-<a href="/join"> 회원가입 </a>
+
+<a class="fs1C5 mt1" onclick="goToUrl(0, 'join')"> 아직 회원이 아니신가요? </a>
+<a class="fs1C5 mt1" onclick="goToUrl(1, 'findEmail')"> 아이디(이메일) 찾기 </a>
+<a class="fs1C5 mt1" onclick="goToUrl(1, 'findPw')"> 비밀번호 찾기 </a>

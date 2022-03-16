@@ -1,5 +1,5 @@
 // index 
-// (ctrl+f)로 숫자를 검색
+// (ctrl+f)로 "(숫자)"를 검색
 // (1). 숫자 세자리수의 콤마를 부여 < 20211018 김진우
 // (2). 랜덤 숫자 함수  < 20211018 김진우
 // (3). 랜덤 문자 함수 < 20211018 김진우
@@ -41,4 +41,25 @@ module.exports = {
       return randStr
   },
 
+  createHashedPassword : (password) => new Promise(async(resolve, reject) => {
+    crypto.randomBytes(64, (err,buf) => {
+      crypto.pbkdf2(password, buf.toString('base64'), 9999, 64, 'sha512', (err, key) => {
+        if(err) {
+          reject(err)
+        } else {
+          resolve({password: key.toString('base64'), salt})
+        }
+      })
+    })
+  }),
+  
+  makePasswordToHashed : (plainPassword, salt) => new Promise(async (resolve, reject) => {
+    crypto.pbkdf2(plainPassword, salt, 9999, 64, 'sha512', (err, key) => {
+      if(err) {
+        reject(err)
+      } else {
+        resolve(key.toString('base64'))
+      }
+    })
+  })
 }

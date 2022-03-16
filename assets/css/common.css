@@ -9,6 +9,7 @@
     . color
     . border
     . shadow
+    . cursor
     . box
     . etc
 */
@@ -35,6 +36,16 @@
 .w90{ width: 90em }
 .w95{ width: 95em }
 .w100{ width: 100em }
+.w105{ width: 105em }
+.w110{ width: 110em }
+.w115{ width: 115em }
+.w120{ width: 120em }
+.w125{ width: 125em }
+.w130{ width: 130em }
+.w135{ width: 135em }
+.w140{ width: 140em }
+.w145{ width: 145em }
+.w150{ width: 150em }
 
 .w_p10{ width: 10% }
 .w_p20{ width: 20% }
@@ -95,6 +106,7 @@
 .m90{ margin: 9em }
 .m100{ margin: 10em }
 
+.mtC5 { margin-top: 0.5em }
 .mt1 { margin-top: 1em }
 .mt2 { margin-top: 2em }
 .mt3 { margin-top: 3em }
@@ -107,6 +119,7 @@
 .mt10 { margin-top: 10em }
 .mt15 { margin-top: 15em }
 
+.mbC5 { margin-bottom: 0.5em }
 .mb1 { margin-bottom: 1em }
 .mb2 { margin-bottom: 2em }
 .mb3 { margin-bottom: 3em }
@@ -192,7 +205,9 @@
 .f { display: flex; }
 
 /* . color */
-.c-1 { color: white }
+.c-white { color: white }
+
+.c-red { color: red }
 
 .c-1 { color: #1d557a }
 
@@ -212,6 +227,12 @@
 /* . shdow */
 
 .shadow { box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px }
+
+/* cursor */
+.cur-p {
+    cursor: pointer;
+}
+
 
 /* . box */
 .box-fl {
@@ -233,4 +254,9 @@
 
 .ta-c {
     text-align: center;
+}
+
+.msg {
+    color: red;
+    font-size: 1.3em;
 }

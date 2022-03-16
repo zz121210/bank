@@ -2,15 +2,9 @@ const express = require('express')
 const router = express.Router()
 const cookieParser = require('cookie-parser');
 router.use(cookieParser())
-const fs = require("fs")
-const db = require('../../conf/db')
-const common = require('../../conf/common')
-
 
 const loginRouter = require('./login/route')
 const joinRouter = require('./join/route')
-
-
 
 router.get("/", (req, res) => {
   res.render("../../routes/user/index/views/index.ejs")

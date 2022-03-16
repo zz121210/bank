@@ -1,0 +1,21 @@
+<form action="login/process/changePw_process" method="POST" onsubmit="return validCheck();">
+    <div class="box-fl shadow w25 p1 bg_c_white mt1">
+        <i class="icofont-lock icofont-2x c-1"></i>    
+        <input type="password" name="m_pw" id="pw1" minlength="6" placeholder="비밀번호" required>
+    </div>
+    
+    <div class="box-fl shadow w25 p1 bg_c_white mt1">
+        <i class="icofont-lock icofont-2x c-1"></i>
+        <input type="password" id="pw2" placeholder="비밀번호 재확인" required>
+    </div>
+    <h1 id="msg1" class="msg mtC5"></h1>
+    
+    
+    <div class="box-fl jc-sa">
+        <input type="submit" value="비밀번호 변경하기" class="shadow bg_c_white w20 p1 mt1 cur-p">
+    </div>
+    
+</form>
+    
+<a class="fs1C5 mt1" onclick="goToUrl(0, 'login')"> 로그인 하러가기 </a>
+    
