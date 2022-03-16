@@ -16,12 +16,12 @@ router.use(session({
   })
 );
 
-const joinRouter = require('./join/route')
+const paperRouter = require('./paper/route')
 
 router.get("/", (req, res) => {
     res.render("../../routes/user/index/views/index.ejs")
 })
 
-router.use('/join', joinRouter)
+router.use('/paper', paperRouter)
 
 module.exports = router;

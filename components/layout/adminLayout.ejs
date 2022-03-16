@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../lib/icofont/icofont.min.css">
+    <script defer="defer" src="../../assets/js/common.js"></script>
+    <script defer="defer" src="../../conf/pluger.js"></script>
+    <script defer="defer" src="../../assets/js/adminLayout.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="">
+                    <i class="icofont-home icofont-3x"></i>
+                </a>
+                
+            </li>
+            <li>
+                <a href="" class="tooltip">
+                    <i class="icofont-logout icofont-3x"></i>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a class="tooltip" onclick="goToUrl(1, 'paper')">
+                    <i class="icofont-file-document icofont-3x"></i>
+                    <span class="tooltiptext">문제지</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="tooltip">
+                    <i class="icofont-document-folder icofont-3x"></i>
+                    <span class="tooltiptext">문제 등록</span>
+                </a>
+            </li>
+            <li>
+                <a href="" class="tooltip">
+                    <i class="icofont-group-students icofont-3x"></i>
+                    <span class="tooltiptext">학생</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="wrap">
+        <header>헤더</header>
+        <div class="flex-wrap">
+            <%-body%>
+        </div>
+    </div>
+</body>
+</html>

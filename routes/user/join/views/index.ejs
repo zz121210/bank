@@ -1,25 +1,24 @@
-<form action="join/join_process" method="POST" onsubmit="return validCheck();">
+<form action="join/process/join_process" method="POST" onsubmit="return validCheck();">
 <div class="box-fl shadow w25 p1 bg_c_white">
     <i class="icofont-email icofont-2x c-1"></i>    
-    <input type="text" name="m_id" id="id" placeholder="아이디(이메일)" required>
-    
+    <input type="email" name="m_id" id="id" data-valid="true" placeholder="아이디(이메일)" required>
 </div>
-<h1 id="msg"></h1>
-
-
+<h1 id="msg1" class="msg mtC5"></h1>
 
 <div class="box-fl shadow w25 p1 bg_c_white mt1">
-    <i class="icofont-ui-password icofont-2x c-1"></i>    
-    <input type="text" name="m_pw" id="pw1" placeholder="비밀번호" required>
+    <i class="icofont-lock icofont-2x c-1"></i>    
+    <input type="password" name="m_pw" id="pw1" minlength="6" placeholder="비밀번호" required>
 </div>
 
 <div class="box-fl shadow w25 p1 bg_c_white mt1">
-    <i class="icofont-ui-password icofont-2x c-1"></i>    
-    <input type="text" id="pw2" placeholder="비밀번호 재 확인" required>
+    <i class="icofont-lock icofont-2x c-1"></i>
+    <input type="password" id="pw2" placeholder="비밀번호 재확인" required>
 </div>
+<h1 id="msg2" class="msg mtC5"></h1>
 
 <div class="box-fl shadow w25 p1 bg_c_white mt1">  
-    <select name="m_role" id="role" class="w_p100 ta-c">
+    <i class="icofont-search-job icofont-2x c-1"></i>
+    <select name="m_role" id="role" class="w_p100 ta-c" required>
         <option value="">직업</option>
         <option value="elementary">초등학생</option>
         <option value="middle">중학생</option>
@@ -34,11 +33,16 @@
     </select>
 </div>
 
+<div class="box-fl shadow w25 p1 bg_c_white mt1">
+    <i class="icofont-smart-phone icofont-2x c-1"></i>
+    <input type="tel" name="m_phone" id="phone" data-valid="true" minlength="10" placeholder="전화번호" required>
+</div>
+<h1 id="msg3" class="msg mtC5"></h1>
+
 <div class="box-fl jc-sa">
-    <input type="submit" value="회원가입" class="shadow bg_c_white w20 p1 mt1">
+    <input type="submit" value="회원가입" class="shadow bg_c_white w20 p1 mt1 cur-p">
 </div>
 
 </form>
 
-
-<a href="join.html"> 회원가입 </a>
+<a class="fs1C5 mt1" onclick="goToUrl(0, 'login')"> 로그인 하러가기 </a>

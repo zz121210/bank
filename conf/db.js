@@ -8,10 +8,13 @@ const db = mysql.createConnection({
   user     : 'zz12121000',
   password : 'rnfptskfn1!',
   database : 'zz12121000',
+<<<<<<< HEAD
   // host     : 'localhost',
   // user     : 'root',
   // password : 'sk369369',
   // database : 'bank',
+=======
+>>>>>>> master
   wait_timeout : 28800,
   connect_timeout :10
 })

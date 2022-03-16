@@ -1,0 +1,83 @@
+/* paper_0 */
+
+.paper {
+    width: 100%;
+    height: 98%;
+    display: flex;
+    color: rgb(96, 102, 107);
+}
+
+.paper_0-section1, .paper_0-section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.paper_0-section1 {
+    flex-basis: 100%;
+    border-top: 0.2em solid;
+    border-bottom: 0.2em solid;
+    border-left: 0.2em solid;
+    flex-shrink: 1;
+}
+
+.paper_0-section2 {
+    flex-basis: 100%;
+    border: 2px solid;
+    flex-shrink: 1;
+}
+
+.problem-wrap {
+    border:1px solid;
+    margin: 1em;
+    flex-basis: 15em;
+}
+
+.paper-page {
+    text-align: center;
+}
+
+/* search */
+
+.result-nav {
+    display: flex;
+    border-bottom: 0.1em solid rgb(143, 143, 143);
+    width: 100%;
+    padding: 1em 0 1em 0;
+    justify-content: space-between;
+}
+
+.result-count {
+    font-size: 1.5em;
+}
+
+.result-option {
+    width: 8em;
+    display: flex;
+    font-size: 1.4em;
+}
+
+.result-section {
+    width: 100%;
+    height: 70em;
+}
+
+.result-section > .problem-box {
+    height: 7em;
+    border: 0.1em solid rgb(143, 143, 143);
+    padding: 0.3em;
+}
+
+.problem-box > .problem-cate {
+    margin-bottom: 0.9em;
+    font-size: 1.2em;
+}
+
+.problem-box > .problem-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.9em;
+    font-size: 1.2em;
+
+}
+

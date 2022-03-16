@@ -4,15 +4,27 @@ const common = require('../../../conf/common')
 const db = require('../../../conf/db')
 const nodemailer = require('nodemailer')
 const crypto = require('crypto')
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
 
 router.get("/", (req, res) => {
-  res.render("../../routes/user/join/views/index.ejs")
+  res.render("../../routes/user/join/views/index.ejs",
+    {
+      layout : "../../components/layout/loginLayout.ejs"
+    }
+  )
 })
 
+<<<<<<< HEAD
 router.post("/join_process", async (req, res) => {
   const { m_id, m_pw, m_role } = req.body;
+=======
+router.post("/process/join_process", (req, res) => {
+  const { m_id, m_pw, m_role, m_phone } = req.body;
+>>>>>>> master
   
   db.query(`INSERT INTO waw_member (m_id, m_pw, reg_date) VALUES (?, ?, NOW())`, [m_id, m_pw], (err) => { })
 
@@ -23,7 +35,12 @@ router.post("/join_process", async (req, res) => {
   })
 
   memberGetId.then(memberId => {
+<<<<<<< HEAD
     db.query("insert into waw_member_info (waw_member_id, m_role) values(?, ?)", [memberId, m_role], (err) => {
+=======
+    db.query("insert into waw_member_info (waw_member_id, m_role, m_phone) values(?, ?, ?)", [memberId, m_role, m_phone], (err) => {
+
+>>>>>>> master
       try {
         const mailConfig = {
           service: 'Naver',
@@ -45,13 +62,23 @@ router.post("/join_process", async (req, res) => {
       } catch (error) {
         console.log(error)
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
       res.redirect("/login")
     })
   })
 })
 
+<<<<<<< HEAD
 router.post("/ajax/valid", (req, res) => {
   const { m_id } = req.body
+=======
+
+router.post("/ajax/idValid", (req, res) => {
+  const {m_id} = req.body
+>>>>>>> master
 
   db.query("select * from waw_member where m_id=?", [m_id], (err, result) => {
     if (result.length > 0) {
@@ -63,6 +90,21 @@ router.post("/ajax/valid", (req, res) => {
   })
 })
 
+<<<<<<< HEAD
+=======
+router.post("/ajax/phoneValid", (req, res) => {
+  const {m_phone} = req.body
+  db.query("select * from waw_member_info where m_phone=?", [m_phone], (err, result) => {
+    if(result.length > 0) {
+      res.json(true)
+    }
+    else {
+      res.json(false)
+    }
+  })
+})
+
+>>>>>>> master
 router.get("/:m_id/:m_pw", (req, res) => {
   const {m_id, m_pw} = req.params;
   memberGetId = new Promise((resolve) => {
@@ -77,5 +119,9 @@ router.get("/:m_id/:m_pw", (req, res) => {
     })
   })
 })
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 
 module.exports = router;
