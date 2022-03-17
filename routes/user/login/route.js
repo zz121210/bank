@@ -24,7 +24,6 @@ router.post("/process/login_process", (req, res) => {
   })
 })
 
-//
 
 router.get("/findEmail", (req, res) => {
   res.render("../../routes/user/login/views/findEmail.ejs",
@@ -38,7 +37,9 @@ router.post("/process/findEmail_process", (req, res) => {
   const {m_phone} = req.body
   memberGetId = new Promise((resolve) => {
     db.query("select * from waw_member_info where m_phone=?", [m_phone], (err, result) => {
-    resolve(result[0].waw_id)
+      if(result.length > 0) {
+        resolve(result[0].waw_id)
+      }
     })
   })
   memberGetId.then(memberId => {
@@ -65,13 +66,8 @@ router.get("/checkEmail", (req, res) => {
   )
 })
 
-router.get("/ajax/findEmail", (req, res) => {
-  
-})
-
-//
-
 router.get("/findPw", (req, res) => {
+ 
   res.render("../../routes/user/login/views/findPw.ejs",
     {
       layout : "../../components/layout/loginLayout.ejs"
@@ -80,19 +76,39 @@ router.get("/findPw", (req, res) => {
 })
 
 router.post("/process/findPw_process", (req, res) => {
-  res.redirect("/login/changePw")
+  const {m_id} = req.body
+  db.query("select * from waw_member where m_id=?", [m_id], (err, result) => {
+    if(result.length > 0) {
+      res.redirect("/login/changePw?m_id=" + result[0].m_id.toString())  
+    }    
+  })
 })
 
 router.get("/changePw", (req, res) => {
+  const {m_id} = req.query
   res.render("../../routes/user/login/views/changePw.ejs",
     {
-      layout : "../../components/layout/loginLayout.ejs"
+      layout : "../../components/layout/loginLayout.ejs",
+      m_id
     }
   )
 })
 
 router.post("/process/changePw_process", (req, res) => {
-  res.redirect("/login")
+  const {m_id, m_pw} = req.body
+  memberGetId = new Promise((resolve) => {
+    db.query("select * from waw_member where m_id=?", [m_id], (err, result) => {
+      if(result.length > 0) {
+        resolve(result[0].waw_id)
+      } 
+    })
+  })
+  
+  memberGetId.then(memberId => {
+    db.query("update waw_member set m_pw=? where waw_id=?", [m_pw, memberId], (err) => {
+      res.redirect("/login")
+    })
+  })
 })
 
 
