@@ -5,7 +5,9 @@
 // (3). 랜덤 문자 함수 < 20211018 김진우
 // (4). 랜덤 문자+숫자 함수 < 20211018 김진우
 
+
 const nodemailer = require('nodemailer')
+const crypto = require('crypto')
 
 module.exports = {
   // (1)
