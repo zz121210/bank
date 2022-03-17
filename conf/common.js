@@ -5,6 +5,8 @@
 // (3). 랜덤 문자 함수 < 20211018 김진우
 // (4). 랜덤 문자+숫자 함수 < 20211018 김진우
 
+
+const nodemailer = require('nodemailer')
 const crypto = require('crypto')
 
 module.exports = {
@@ -63,5 +65,28 @@ module.exports = {
         resolve(key.toString('base64'))
       }
     })
-  })
+  }),
+
+  sendMail : (to, subject, html) => {try {
+    const mailConfig = {
+      service: 'Naver',
+      host: 'smtp.naver.com',
+      port: 587,
+      auth: {
+        user: "smy4778",
+        pass: "sk13579"
+      }
+    }
+    const message = {
+      from: "smy4778@naver.com",
+      to,
+      subject,
+      html
+      // // localhost변경 및 모르는 사람에게 메일이 왔을시
+    }
+    const transporter = nodemailer.createTransport(mailConfig)
+    transporter.sendMail(message)
+  } catch (error) {
+    console.log(error)
+  }}
 }
