@@ -41,7 +41,7 @@ router.post("/process/join_process", (req, res) => {
           from: "smy4778@naver.com",
           to: m_id,
           subject: '이메일 인증 요청 메일입니다.',
-          html: '<a href="localhost:3000/' + m_id + '/'+ m_pw + '"><p> 이메일을 인증하려면 여기를 클릭하세요 </p></a>' // localhost변경 및 모르는 사람에게 메일이 왔을시
+          html: '<a href="http://localhost:3000/join' + m_id + '/'+ m_pw + '"><p> 이메일을 인증하려면 여기를 클릭하세요 </p></a>' // localhost변경 및 모르는 사람에게 메일이 왔을시
         }
         const transporter = nodemailer.createTransport(mailConfig)
         transporter.sendMail(message)
