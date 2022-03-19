@@ -16,10 +16,8 @@ router.post("/process/login_process", (req, res) => {
 
   db.query("select * from waw_member where m_id=? and m_pw=?", [m_id, m_pw], (err, result) => {
     if(result.length > 0) {
-      req.session.id = result.m_id
-      req.session.save(() => {
-        res.redirect('/admin')
-      })
+      res.cookie("set-cookie",m_id)
+      res.redirect('/admin')
     }
   })
 })
@@ -79,17 +77,19 @@ router.post("/process/findPw_process", (req, res) => {
   const {m_id} = req.body
   db.query("select * from waw_member where m_id=?", [m_id], (err, result) => {
     if(result.length > 0) {
-      res.redirect("/login/changePw?m_id=" + result[0].m_id.toString())  
+      base64EncodedText = Buffer.from(m_id, "utf8").toString('base64');
+      common.sendMail(m_id, "비밀번호 인증 메일입니다.", '<a href="http://localhost:3000/login/auth/'+ base64EncodedText + '/changePw"><p> 비밀번호를 바꾸시려면 여기를 클릭하세요 </p></a>')  
     }    
   })
 })
 
-router.get("/changePw", (req, res) => {
-  const {m_id} = req.query
+router.get("/auth/:authUrl/changePw", (req, res) => {
+  const {authUrl} = req.params
+  base64DecodedText = Buffer.from(authUrl, "base64").toString('utf8')
   res.render("../../routes/user/login/views/changePw.ejs",
     {
       layout : "../../components/layout/loginLayout.ejs",
-      m_id
+      m_id: base64DecodedText
     }
   )
 })
